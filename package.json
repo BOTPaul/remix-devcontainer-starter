@@ -4,7 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "setup": "pnpm --filter my-remix-app run setup",
+    "dev": "pnpm --filter my-remix-app dev",
+    "test": "pnpm --filter my-remix-app test",
+    "test:e2e": "pnpm --filter my-remix-app test:e2e:dev",
+    "validate": "pnpm --filter my-remix-app validate"
   },
   "keywords": [],
   "author": "",
