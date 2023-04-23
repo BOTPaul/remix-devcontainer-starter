@@ -1,0 +1,24 @@
+{
+  "build": {
+    "dockerfile": "dockerfile",
+    "args": {
+      "VARIANT": "18"
+    }
+  },
+  "remoteUser": "node",
+  "postCreateCommand": "pnpm install && pnpm dlx playwright install-deps",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "rome.rome",
+        "yoavbls.pretty-ts-errors",
+        "bradlc.vscode-tailwindcss"
+      ]
+    }
+  },
+  "forwardPorts": [
+    80,
+    3000,
+    9323
+  ]
+}
